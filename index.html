@@ -1,502 +1,558 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adnan Portfolio - Desarrollador Innovador</title>
-    <!-- Fuente Roboto desde Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      /* VARIABLES Y RESET */
-      :root {
-        --color-primary: #0d6efd;
-        --color-secondary: #f8f9fa;
-        --color-background: #212529;
-        --color-text: #ffffff;
-        --neon-color: #00e5ff;
-        --transition-speed: 0.4s;
-        --font-main: "Roboto", sans-serif;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: var(--font-main);
-        background-color: var(--color-background);
-        color: var(--color-text);
-        line-height: 1.6;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-      }
-      /* BARRA DE NAVEGACIÓN */
-      nav {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background-color: var(--color-background);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        z-index: 1000;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-      nav .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-      nav ul {
-        list-style: none;
-        display: flex;
-        margin-left: 2rem;
-      }
-      nav ul li {
-        margin: 0 1rem;
-      }
-      nav ul li a {
-        color: var(--color-text);
-        text-decoration: none;
-        transition: color var(--transition-speed);
-      }
-      nav ul li a:hover {
-        color: var(--neon-color);
-        text-shadow: 0 0 5px var(--neon-color);
-      }
-      /* SWITCH DE IDIOMA */
-      #lang-switch {
-        background-color: var(--color-primary);
-        color: var(--color-secondary);
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        font-weight: bold;
-      }
-      #lang-switch:hover {
-        background-color: var(--neon-color);
-      }
-      /* MENÚ HAMBURGUESA */
-      .hamburger {
-        display: none;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adnan Portfolio - Desarrollador Innovador</title>
+  <!-- Fuente Roboto desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* VARIABLES Y RESET */
+    :root {
+      --color-primary: #0d6efd;
+      --color-secondary: #f8f9fa;
+      --color-background: #212529;
+      --color-text: #ffffff;
+      --neon-color: #00e5ff;
+      --transition-speed: 0.4s;
+      --font-main: "Roboto", sans-serif;
+        --title-color: #3498db;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--color-background);
+      color: var(--color-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* BARRA DE NAVEGACIÓN */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: var(--color-background);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin-left: 2rem;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: var(--color-text);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+
+    nav ul li a:hover {
+      color: var(--neon-color);
+      text-shadow: 0 0 5px var(--neon-color);
+    }
+
+    /* SWITCH DE IDIOMA */
+    #lang-switch {
+      background-color: var(--color-primary);
+      color: var(--color-secondary);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-weight: bold;
+    }
+
+    #lang-switch:hover {
+      background-color: var(--neon-color);
+    }
+
+    /* MENÚ HAMBURGUESA */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 4px;
+      width: 25px;
+      background-color: var(--color-text);
+      margin-bottom: 4px;
+      border-radius: 2px;
+      transition: transform var(--transition-speed);
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 7rem 2rem 5rem;
+      background: linear-gradient(to bottom,
+          var(--color-primary),
+          var(--color-background));
+      margin-top: 60px;
+    }
+
+    header .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header .hero-content p {
+      font-size: 1.3rem;
+    }
+
+    /* CONTENEDOR GENERAL */
+    .container {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity var(--transition-speed) ease-out,
+        transform var(--transition-speed) ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* SECCIÓN: SOBRE MÍ */
+    #sobre-mi h2.section-heading {
+  font-size: 3rem; /* Puedes ajustar este tamaño según el diseño */
+}
+    .sobre-mi-contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .sobre-mi-contenedor img.perfil {
+      width: 200px;
+      border-radius: 50%;
+      border: 4px solid var(--color-primary);
+    }
+
+    .sobre-mi-contenedor div {
+      flex: 1;
+    }
+
+    .button-cv {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: var(--color-primary);
+      color: var(--color-secondary);
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background var(--transition-speed),
+        box-shadow var(--transition-speed);
+    }
+
+    .button-cv:hover {
+      background-color: var(--neon-color);
+      box-shadow: 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
+    }
+
+    /* LISTA DE CONOCIMIENTOS */
+    /* Estilo para el título de la sección "Conocimientos" */
+    #conocimientos h3.section-heading {
+  font-size: 3rem;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-align: center;
+  transition: text-shadow 0.3s ease;
+}
+
+/* Contenedor general de las cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Cada card o contenedor de categoría (sin neon por defecto) */
+.skill-box {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+
+/* Neon solo en hover */
+.skill-box:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 20px var(--neon-color), 0 0 30px var(--neon-color);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--neon-color);
+}
+
+/* Título de cada contenedor */
+.skill-box h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+.skill-box:hover h4 {
+  color: var(--neon-color);
+}
+
+/* Área interna para los ítems tecnológicos */
+.tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Cada ítem o tecnología */
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover en cada ítem con efecto neon */
+.tech-item:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  text-shadow: 0 0 5px var(--neon-color);
+}
+
+/* Estilo de las imágenes de cada tecnología */
+.tech-item img {
+  width: 40px;
+  height: auto;
+}
+
+/* Nombre de la tecnología */
+.tech-item span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+
+
+    /* SECCIÓN: PROYECTOS */
+    #proyectos h2.section-heading {
+  font-size: 3rem;
+}
+    .proyectos-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .proyecto {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--color-text);
+      transition: transform var(--transition-speed),
+        box-shadow var(--transition-speed);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proyecto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--neon-color), 0 0 30px var(--neon-color);
+    }
+
+    .proyecto img.proyecto-imagen {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .proyecto-info {
+      padding: 1rem;
+    }
+
+   /* Estilo para la sección de Contacto */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-link:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+
+
+    @media screen and (max-width: 768px) {
+      .sobre-mi-contenedor {
         flex-direction: column;
-        cursor: pointer;
-      }
-      .hamburger span {
-        height: 4px;
-        width: 25px;
-        background-color: var(--color-text);
-        margin-bottom: 4px;
-        border-radius: 2px;
-        transition: transform var(--transition-speed);
-      }
-      .hamburger.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-      .hamburger.open span:nth-child(2) {
-        opacity: 0;
-      }
-      .hamburger.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-      }
-      /* HEADER */
-      header {
-        display: flex;
-        justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 7rem 2rem 5rem;
-        background: linear-gradient(
-          to bottom,
-          var(--color-primary),
-          var(--color-background)
-        );
-        margin-top: 60px;
       }
-      header .hero-content h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
-      header .hero-content p {
-        font-size: 1.3rem;
-      }
-      /* CONTENEDOR GENERAL */
-      .container {
-        padding: 4rem 2rem;
-        max-width: 1200px;
-        margin: auto;
-      }
-      .reveal {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity var(--transition-speed) ease-out,
-          transform var(--transition-speed) ease-out;
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      /* SECCIÓN: SOBRE MÍ */
-      .sobre-mi-contenedor {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        align-items: center;
-      }
-      .sobre-mi-contenedor img.perfil {
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-background);
+        position: absolute;
+        top: 60px;
+        right: 2rem;
         width: 200px;
-        border-radius: 50%;
-        border: 4px solid var(--color-primary);
-      }
-      .sobre-mi-contenedor div {
-        flex: 1;
-      }
-      .button-cv {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background-color: var(--color-primary);
-        color: var(--color-secondary);
-        text-decoration: none;
-        border-radius: 4px;
-        transition: background var(--transition-speed),
-          box-shadow var(--transition-speed);
-      }
-      .button-cv:hover {
-        background-color: var(--neon-color);
-        box-shadow: 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
-      }
-      /* LISTA DE CONOCIMIENTOS */
-      .habilidades {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-      .habilidades li {
-        display: flex;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 0.3rem 0.6rem;
-        border-radius: 4px;
-        transition: transform var(--transition-speed),
-          box-shadow var(--transition-speed);
-      }
-      .habilidades li:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
-      }
-      .icono-habilidad {
-        width: 20px;
-        margin-right: 0.4rem;
-      }
-      /* SECCIÓN: PROYECTOS */
-      .proyectos-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-      }
-      .proyecto {
-        background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 8px;
-        text-decoration: none;
-        color: var(--color-text);
-        transition: transform var(--transition-speed),
-          box-shadow var(--transition-speed);
-        display: flex;
-        flex-direction: column;
-      }
-      .proyecto:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px var(--neon-color), 0 0 30px var(--neon-color);
-      }
-      .proyecto img.proyecto-imagen {
-        width: 100%;
-        height: auto;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-      }
-      .proyecto-info {
         padding: 1rem;
       }
-      /* SECCIÓN: CONTACTO */
 
-      .contact-wrapper {
+      nav ul.active {
         display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
-        justify-content: center;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+    .section-heading {
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
         text-align: center;
-        background: rgba(255, 255, 255, 0.05);
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        font-weight: 400;
+        margin: 2rem 0 1rem;
+        color: var(--title-color); /* Aplica el color amigable a los títulos */
       }
+  </style>
+</head>
 
-      .contact-info p {
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-        line-height: 1.5;
-      }
+<body>
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav>
+    <div class="logo">Portfolio</div>
+    <div class="hamburger" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="#sobre-mi" data-i18n="navAbout">Sobre mí</a></li>
+      <li><a href="#proyectos" data-i18n="navProjects">Proyectos</a></li>
+      <li><a href="#contacto" data-i18n="navContact">Contacto</a></li>
+    </ul>
+    <!-- Switch de idioma integrado en el nav -->
+    <div id="lang-switch" role="button" tabindex="0" aria-label="Cambiar idioma">
+      EN
+    </div>
+  </nav>
 
-      .contact-links {
-        display: flex;
-        gap: 2rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+  <!-- HEADER -->
+  <header>
+    <div class="hero-content">
+      <h1>Adnan Hamidoun El Habti</h1>
+      <p data-i18n="heroSubtitle">
+        Desarrollador Java & Spring | Eficiencia, estructura y visión técnica
+      </p>
+    </div>
+  </header>
 
-      .contact-link {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: var(--color-text);
-        font-size: 1rem;
-        gap: 0.5rem;
-        transition: transform 0.3s ease, filter 0.3s ease;
-        padding: 0.5rem 1rem;
-        border: 1px solid transparent;
-        border-radius: 4px;
-      }
-
-      .contact-link:hover {
-        transform: scale(1.05);
-        filter: brightness(1.2);
-        border-color: var(--color-primary);
-      }
-
-      /* FOOTER */
-      footer {
-        text-align: center;
-        padding: 1.5rem;
-        background-color: var(--color-background);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      footer p {
-        transition: color var(--transition-speed);
-      }
-      /* BOTÓN "VOLVER ARRIBA" */
-      #back-to-top {
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        background-color: var(--color-primary);
-        color: var(--color-secondary);
-        padding: 0.5rem 0.75rem;
-        border-radius: 50%;
-        font-size: 1.5rem;
-        text-decoration: none;
-        display: none;
-        transition: transform 0.3s, background-color 0.3s;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-      }
-      #back-to-top:hover {
-        transform: scale(1.1);
-        background-color: #0b5ed7;
-      }
-      @media screen and (max-width: 768px) {
-        .sobre-mi-contenedor {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-        nav ul {
-          display: none;
-          flex-direction: column;
-          background-color: var(--color-background);
-          position: absolute;
-          top: 60px;
-          right: 2rem;
-          width: 200px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 8px;
-          padding: 1rem;
-        }
-        nav ul.active {
-          display: flex;
-        }
-        .hamburger {
-          display: flex;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- BARRA DE NAVEGACIÓN -->
-    <nav>
-      <div class="logo">Portfolio</div>
-      <div class="hamburger" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul>
-        <li><a href="#sobre-mi" data-i18n="navAbout">Sobre mí</a></li>
-        <li><a href="#proyectos" data-i18n="navProjects">Proyectos</a></li>
-        <li><a href="#contacto" data-i18n="navContact">Contacto</a></li>
-      </ul>
-      <!-- Switch de idioma integrado en el nav -->
-      <div
-        id="lang-switch"
-        role="button"
-        tabindex="0"
-        aria-label="Cambiar idioma"
-      >
-        EN
-      </div>
-    </nav>
-
-    <!-- HEADER -->
-    <header>
-      <div class="hero-content">
-        <h1>Adnan Hamidoun El Habti</h1>
-        <p data-i18n="heroSubtitle">
-          Desarrollador Java & Spring | Eficiencia, estructura y visión técnica
-        </p>
-      </div>
-    </header>
-
-    <!-- SECCIÓN: SOBRE MÍ -->
-    <section id="sobre-mi" class="container reveal">
-      <div class="sobre-mi-contenedor">
-        <img
-          src="./icons/fotoCurriculum.jpg"
-          alt="Foto de Adnan"
-          class="perfil"
-        />
-        <div>
-          <h2 data-i18n="aboutTitle">Sobre mí</h2>
+  <!-- SECCIÓN: SOBRE MÍ -->
+  <section id="sobre-mi" class="container reveal">
+    <div class="sobre-mi-contenedor">
+      <img src="./icons/fotoCurriculum.jpg" alt="Foto de Adnan" class="perfil" />
+      <div>
+  <h2 class="section-heading" data-i18n="aboutTitle">Sobre mí</h2>
           <p data-i18n="aboutText1">
-            Soy desarrollador de aplicaciones multiplataforma con una sólida
-            formación técnica y experiencia en la creación de sistemas
-            escalables y eficientes. Me especializo en el desarrollo backend,
-            integrando tecnologías modernas como Spring Boot, APIs REST y bases
-            de datos SQL, asegurando rendimiento, seguridad y estabilidad en
-            cada proyecto. Mi enfoque se centra en la optimización de procesos,
-            la arquitectura de software y la integración de servicios externos
-            para garantizar soluciones innovadoras y efectivas.
-          </p>
-          <br />
-          <p data-i18n="aboutText2">
-            Soy una persona muy comunicativa, a la que le encanta escuchar y
-            aprender de los demás. Cada día me esfuerzo por adquirir nuevos
-            conocimientos y mejorar mis habilidades, convencido de que siempre
-            se puede aprender algo valioso en cada interacción.
-          </p>
-          <br />
-          <p data-i18n="aboutText3">
-            Mi portafolio es el reflejo de mi evolución en el desarrollo
-            multiplataforma, demostrando un compromiso constante con la
-            innovación y la excelencia. Cada proyecto evidencia mi capacidad
-            para transformar desafíos en soluciones creativas y efectivas,
-            impulsando el trabajo colaborativo. Estoy preparado para aportar mi
-            experiencia y visión técnica a equipos y proyectos que busquen
-            marcar la diferencia.
-          </p>
-          <br />
-          <a
-            class="button-cv"
-            href="./icons/Curriculum Dev.pdf"
-            download
-            target="_blank"
-            data-i18n="aboutCVButton"
-            >Visualizar CV</a
-          >
-        </div>
+          Soy desarrollador de aplicaciones multiplataforma con una sólida
+          formación técnica y experiencia en la creación de sistemas
+          escalables y eficientes. Me especializo en el desarrollo backend,
+          integrando tecnologías modernas como Spring Boot, APIs REST y bases
+          de datos SQL, asegurando rendimiento, seguridad y estabilidad en
+          cada proyecto. Mi enfoque se centra en la optimización de procesos,
+          la arquitectura de software y la integración de servicios externos
+          para garantizar soluciones innovadoras y efectivas.
+        </p>
+        <br />
+        <p data-i18n="aboutText2">
+          Soy una persona muy comunicativa, a la que le encanta escuchar y
+          aprender de los demás. Cada día me esfuerzo por adquirir nuevos
+          conocimientos y mejorar mis habilidades, convencido de que siempre
+          se puede aprender algo valioso en cada interacción.
+        </p>
+        <br />
+        <p data-i18n="aboutText3">
+          Mi portafolio es el reflejo de mi evolución en el desarrollo
+          multiplataforma, demostrando un compromiso constante con la
+          innovación y la excelencia. Cada proyecto evidencia mi capacidad
+          para transformar desafíos en soluciones creativas y efectivas,
+          impulsando el trabajo colaborativo. Estoy preparado para aportar mi
+          experiencia y visión técnica a equipos y proyectos que busquen
+          marcar la diferencia.
+        </p>
+        <br />
+        <a class="button-cv" href="./icons/Curriculum Back End.pdf" download target="_blank"
+          data-i18n="aboutCVButton">Visualizar CV</a>
       </div>
+    </div>
 
-      <h3 style="margin-top: 40px" data-i18n="aboutSkills">Conocimientos</h3>
-      <ul class="habilidades">
-        <li>
-          <img src="./icons/html.png" alt="HTML" class="icono-habilidad" /> HTML
-        </li>
-        <li>
-          <img src="./icons/css.png" alt="CSS" class="icono-habilidad" /> CSS
-        </li>
-        <li>
-          <img
-            src="./icons/typescript.png"
-            alt="TypeScript"
-            class="icono-habilidad"
-          />
-          TypeScript
-        </li>
-        <li>
-          <img
-            src="./icons/angular.png"
-            alt="Angular"
-            class="icono-habilidad"
-          />
-          Angular
-        </li>
-        <li>
-          <img src="./icons/spring.png" alt="Spring" class="icono-habilidad" />
-          Spring
-        </li>
-        <li>
-          <img src="./icons/java.png" alt="Java" class="icono-habilidad" /> Java
-        </li>
-        <li>
-          <img src="./icons/sql.png" alt="MySQL" class="icono-habilidad" /> SQL
-        </li>
-        <li>
-          <img src="./icons/git.png" alt="Git" class="icono-habilidad" /> Git
-        </li>
-        <li>
-          <img src="./icons/github.png" alt="GitHub" class="icono-habilidad" />
-          GitHub
-        </li>
-        <li>
-          <img src="./icons/api.png" alt="APIs REST" class="icono-habilidad" />
-          APIs REST
-        </li>
-        <li>
-          <img src="./icons/junit.png" alt="JUnit" class="icono-habilidad" />
-          JUnit
-        </li>
-        <li>
-          <img src="./icons/kotlin.png" alt="Kotlin" class="icono-habilidad" />
-          Kotlin
-        </li>
-        <li>
-          <img src="./icons/linux.png" alt="Linux" class="icono-habilidad" />
-          Linux
-        </li>
-        <li>
-          <img
-            src="./icons/windows.png"
-            alt="Windows"
-            class="icono-habilidad"
-          />
-          Windows
-        </li>
-        <li>
-          <img src="./icons/aws.png" alt="AWS" class="icono-habilidad" /> AWS
-        </li>
-      </ul>
-    </section>
+  <h3 class="section-heading section-title" data-i18n="aboutSkills">Conocimientos</h3>
+  <div class="skills-grid">
+  <!-- Contenedor: Lenguajes de Programación -->
+  <div class="skill-box" id="lenguajes">
+    <h4>Technologies</h4>
+    <div class="tech-items">
+      <div class="tech-item">
+        <img src="./icons/java.png" alt="Java" class="icono-habilidad" />
+        <span>Java</span>
+      </div>
+      <div class="tech-item">
+        <img src="./icons/kotlin.png" alt="Kotlin" class="icono-habilidad" />
+        <span>Kotlin</span>
+      </div>
+      <div class="tech-item">
+        <img src="./icons/python.png" alt="HTML" class="icono-habilidad" />
+        <span>Python</span>
+      </div>
+      <div class="tech-item">
+        <img src="./icons/typescript.png" alt="TypeScript" class="icono-habilidad" />
+        <span>TypeScript</span>
+      </div>
+      <div class="tech-item">
+        <img src="./icons/sql.png" alt="SQL" class="icono-habilidad" />
+        <span>SQL</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor: Frameworks -->
+  <div class="skill-box" id="frameworks">
+    <h4>Frameworks</h4>
+    <div class="tech-items">
+      <div class="tech-item">
+        <img src="./icons/spring.png" alt="Spring" class="icono-habilidad" />
+        <span>Spring</span>
+      </div>
+      <div class="tech-item">
+        <img src="./icons/angular.png" alt="Angular" class="icono-habilidad" />
+        <span>Angular</span>
+      </div>
+      <div class="tech-item">
+        <img src="./icons/junit.png" alt="JUnit" class="icono-habilidad" />
+        <span>JUnit</span>
+      </div>
+      <div class="tech-item">
+        <img src="./icons/mockito.png" alt="Mockito" class="icono-habilidad" />
+        <span>Mockito</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor: Herramientas de Desarrollo -->
+  <div class="skill-box" id="herramientas">
+    <h4>Extras</h4>
+    <div class="tech-items">
+      <div class="tech-item">
+        <img src="./icons/git.png" alt="Git" class="icono-habilidad" />
+        <span>Git</span>
+      </div>
+      <div class="tech-item">
+        <img src="./icons/postman.png" alt="Postman" class="icono-habilidad" />
+        <span>Postman</span>
+      </div>
+      <div class="tech-item">
+        <img src="./icons/aws.png" alt="AWS" class="icono-habilidad" />
+        <span>AWS</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- SECCIÓN: PROYECTOS -->
     <section id="proyectos" class="container reveal">
-      <h2 data-i18n="projectsTitle">Mis Proyectos</h2>
-      <div class="proyectos-container">
+  <h2 class="section-heading" data-i18n="projectsTitle">Mis Proyectos</h2>      <div class="proyectos-container">
         <a href="channelcast.html" class="proyecto">
-          <img
-            src="./icons/channelCast.png"
-            alt="ChannelCast"
-            class="proyecto-imagen"
-          />
+          <img src="./icons/channelCast.png" alt="ChannelCast" class="proyecto-imagen" />
           <div class="proyecto-info">
             <h3>🔊 ChannelCast: Java Real-Time Chat App</h3>
             <p data-i18n="project1Desc">
@@ -506,11 +562,7 @@
           </div>
         </a>
         <a href="fixOnDemand.html" class="proyecto">
-          <img
-            src="./icons/fixOnDemand.png"
-            alt="FixOnDemand"
-            class="proyecto-imagen"
-          />
+          <img src="./icons/fixOnDemand.png" alt="FixOnDemand" class="proyecto-imagen" />
           <div class="proyecto-info">
             <h3>🛠️ FixOnDemand: App de Ticketing de Incidencias</h3>
             <p data-i18n="project2Desc">
@@ -522,74 +574,28 @@
       </div>
     </section>
 
-    <!-- SECCIÓN: CONTACTO Mejorada -->
-    <section id="contacto" class="container reveal">
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <p data-i18n="contactText">
-            ¿Tienes alguna consulta o propuesta? ¡Hablemos!
-          </p>
-        </div>
-        <div class="contact-links">
-          <a
-            href="mailto:adnanhamidoun@gmail.com"
-            class="contact-link"
-            aria-label="Email"
-          >
-            <img
-              src="./icons/gmail.png"
-              alt="Email"
-              class="social-icon"
-              width="30"
-            />
-            <span>Email</span>
-          </a>
-          <a
-            href="https://github.com/adnanhamidoun/-Portfolio"
-            target="_blank"
-            class="contact-link"
-            aria-label="GitHub"
-          >
-            <img
-              src="./icons/github.png"
-              alt="GitHub"
-              class="social-icon"
-              width="30"
-            />
-            <span>GitHub</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/adnan-hamidoun-el-habti-252079311/"
-            target="_blank"
-            class="contact-link"
-            aria-label="LinkedIn"
-          >
-            <img
-              src="./icons/linkedin.png"
-              alt="LinkedIn"
-              class="social-icon"
-              width="30"
-            />
-            <span>LinkedIn</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <p>
-          &copy; 2025 Adnan.
-          <span data-i18n="footerText"
-            >Creatividad en libertad: nada de derechos reservados.</span
-          >
-        </p>
-      </div>
-    </footer>
-
-    <!-- BOTÓN: VOLVER ARRIBA -->
-    <a href="#" id="back-to-top" title="Volver arriba">↑</a>
+    <!-- SECCIÓN: CONTACTO -->
+<section id="contacto" class="container reveal">
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <p data-i18n="contactText">¿Tienes alguna consulta o propuesta? ¡Hablemos!</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:adnanhamidoun@gmail.com" class="contact-link" aria-label="Email">
+        <img src="./icons/gmail.png" alt="Email" class="social-icon" width="30" />
+        <span>Email</span>
+      </a>
+      <a href="https://github.com/adnanhamidoun/-Portfolio" target="_blank" class="contact-link" aria-label="GitHub">
+        <img src="./icons/github.png" alt="GitHub" class="social-icon" width="30" />
+        <span>GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/adnan-hamidoun-el-habti-252079311/" target="_blank" class="contact-link" aria-label="LinkedIn">
+        <img src="./icons/linkedin.png" alt="LinkedIn" class="social-icon" width="30" />
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </div>
+</section>
 
     <script>
       // Función para revelar elementos al hacer scroll
@@ -733,5 +739,6 @@
         if (event.key === "Enter") langSwitch.click();
       });
     </script>
-  </body>
+</body>
+
 </html>
