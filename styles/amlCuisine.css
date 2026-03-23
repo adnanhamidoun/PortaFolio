@@ -231,6 +231,37 @@ main {
   text-align: justify;
 }
 
+.project-cta {
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.68rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #201505;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold-main));
+  border: 1px solid rgba(212, 175, 104, 0.55);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.26);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.repo-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.05);
+}
+
 /* INFO CARD */
 .info-card {
   background: linear-gradient(
