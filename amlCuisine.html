@@ -1,0 +1,779 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuisine AML - Plataforma predictiva Full-Stack</title>
+    <meta
+      name="description"
+      content="Cuisine AML: Plataforma predictiva Full-Stack con Automatización de IA y Dashboards interactivos para hostelería."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/amlCuisine.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="skipToMain"
+      >Saltar al contenido principal</a
+    >
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="badge" data-i18n="badge">Full-Stack Platform</p>
+        <h1 data-i18n="title">Cuisine AML</h1>
+        <p data-i18n="subtitle">
+          Plataforma predictiva Full-Stack: Automatización de IA y Dashboards
+          interactivos para hostelería.
+        </p>
+      </div>
+    </header>
+
+    <nav aria-label="Navegacion principal">
+      <a class="home-link" href="index.html" data-i18n="backHome">Inicio</a>
+      <button id="lang-toggle" type="button" aria-label="Cambiar idioma">
+        EN
+      </button>
+    </nav>
+
+    <main id="main-content" class="container">
+      <!-- SECTION: WELCOME -->
+      <section id="bienvenida" aria-labelledby="welcome-title">
+        <h2 id="welcome-title" data-i18n="welcomeTitle">
+          Bienvenido a Cuisine AML
+        </h2>
+        <p data-i18n="welcomeText1">
+          Este proyecto fue mi gran campo de pruebas para unir todo lo
+          aprendido: desde el desarrollo de interfaces modernas en React hasta
+          la ingeniería de datos en la nube. Mi objetivo no era solo predecir
+          ventas, sino crear una herramienta que un restaurador pudiera usar de
+          verdad en su día a día.
+        </p>
+        <p data-i18n="welcomeText2">
+          Fue un reto de humildad técnica. Aprendí que de nada sirve tener un
+          modelo de AutoML avanzado en la nube si no eres capaz de visualizar
+          esos resultados de forma clara. Conectar los pipelines automatizados
+          de Azure con un frontend dinámico me enseñó a gestionar el flujo
+          completo del dato, desde un ticket físico procesado por OCR hasta una
+          gráfica de tendencia en pantalla.
+        </p>
+      </section>
+
+      <!-- SECTION: ABOUT -->
+      <section id="acerca" aria-labelledby="about-title">
+        <h2 id="about-title" data-i18n="aboutTitle">Acerca de Cuisine AML</h2>
+        <div class="info-card">
+          <p data-i18n="aboutDesc">
+            Cuisine AML es una solución integral que automatiza la ingesta de
+            datos y ofrece previsiones de demanda en tiempo real. Utiliza
+            servicios cognitivos para digitalizar información y modelos de
+            aprendizaje automático para predecir servicios y platos, presentando
+            todo en un panel de control intuitivo.
+          </p>
+          <h3 data-i18n="featuresTitle">Funciones destacadas</h3>
+          <ul class="features-list">
+            <li>
+              <i class="fa-solid fa-chart-line"></i>
+              <strong data-i18n="feature1TitleShort"
+                >Visualización Dinámica:</strong
+              >
+              <span data-i18n="feature1Desc">
+                Dashboards interactivos en React para el seguimiento de
+                tendencias.</span
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-file-pdf"></i>
+              <strong data-i18n="feature2TitleShort"
+                >Digitalización OCR:</strong
+              >
+              <span data-i18n="feature2Desc">
+                Extracción automática de datos mediante Azure Document
+                Intelligence.</span
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-brain"></i>
+              <strong data-i18n="feature3TitleShort">Predicción AutoML:</strong>
+              <span data-i18n="feature3Desc">
+                Modelos de forecasting optimizados para prever demanda.</span
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-rocket"></i>
+              <strong data-i18n="feature4TitleShort"
+                >Arquitectura Desacoplada:</strong
+              >
+              <span data-i18n="feature4Desc">
+                Backend ágil con FastAPI y documentación automática
+                Swagger.</span
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <strong data-i18n="feature5TitleShort">Pipelines de IA:</strong>
+              <span data-i18n="feature5Desc">
+                Automatización total del entrenamiento y despliegue en
+                Azure.</span
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-server"></i>
+              <strong data-i18n="feature6TitleShort">Ecosistema Cloud:</strong>
+              <span data-i18n="feature6Desc">
+                Almacenamiento y gestión en Azure SQL Server y Storage.</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION: TECH STACK -->
+      <section id="tecnologias" aria-labelledby="tech-title">
+        <h2 id="tech-title" data-i18n="techTableTitle">
+          Tecnologías Utilizadas
+        </h2>
+        <div class="tech-container">
+          <div class="tech-block">
+            <h3>
+              <i class="fa-brands fa-react"></i>
+              <span data-i18n="techFrontend">Frontend</span>
+            </h3>
+            <ul>
+              <li><i class="fa-brands fa-react"></i> React</li>
+              <li>
+                <i class="fa-solid fa-chart-bar"></i> Visualización de datos
+              </li>
+              <li><i class="fa-solid fa-code"></i> Hooks & Componentes</li>
+              <li><i class="fa-solid fa-network-wired"></i> API Consumption</li>
+            </ul>
+          </div>
+          <div class="tech-block">
+            <h3>
+              <i class="fa-brands fa-python"></i>
+              <span data-i18n="techBackend">Backend & API</span>
+            </h3>
+            <ul>
+              <li><i class="fa-brands fa-python"></i> Python</li>
+              <li><i class="fa-solid fa-flask"></i> FastAPI</li>
+              <li><i class="fa-solid fa-file-lines"></i> Swagger (OpenAPI)</li>
+              <li><i class="fa-solid fa-diagram-project"></i> REST API</li>
+            </ul>
+          </div>
+          <div class="tech-block">
+            <h3>
+              <i class="fa-solid fa-brain"></i>
+              <span data-i18n="techAI">IA & Automatización</span>
+            </h3>
+            <ul>
+              <li><i class="fa-solid fa-brain"></i> Azure AutoML</li>
+              <li>
+                <i class="fa-solid fa-file-pdf"></i> OCR / Document Intelligence
+              </li>
+              <li><i class="fa-solid fa-arrows-rotate"></i> Pipelines de ML</li>
+              <li><i class="fa-solid fa-sliders"></i> Feature Engineering</li>
+            </ul>
+          </div>
+          <div class="tech-block">
+            <h3>
+              <i class="fa-solid fa-database"></i>
+              <span data-i18n="techData">Datos & Cloud</span>
+            </h3>
+            <ul>
+              <li><i class="fa-solid fa-database"></i> Azure SQL Server</li>
+              <li><i class="fa-solid fa-cloud"></i> Azure Storage</li>
+              <li><i class="fa-solid fa-sitemap"></i> Data Pipeline</li>
+              <li><i class="fa-solid fa-rocket"></i> Model Deployment</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: TECHNICAL FEATURES -->
+      <section id="caracteristicas" aria-labelledby="tech-features-title">
+        <h2 id="tech-features-title" data-i18n="techFeaturesTitle">
+          Características Técnicas del Sistema
+        </h2>
+        <div class="tech-features">
+          <ul>
+            <li data-i18n="techFeat1">
+              <i class="fa-solid fa-check"></i>
+              <strong>Flujo de Datos End-to-End:</strong> Integración completa
+              desde captura (OCR) hasta visualización frontend, garantizando
+              integridad del dato.
+            </li>
+            <li data-i18n="techFeat2">
+              <i class="fa-solid fa-bolt"></i>
+              <strong>Dashboards de Alta Performance:</strong> Interfaces
+              reactivas en React para filtrar y analizar predicciones con
+              fluidez.
+            </li>
+            <li data-i18n="techFeat3">
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <strong>Automatización con Pipelines:</strong> Flujos que
+              automatizan re-entrenamiento de modelos sin intervención manual.
+            </li>
+            <li data-i18n="techFeat4">
+              <i class="fa-solid fa-brain"></i>
+              <strong>Servicios Cognitivos Azure:</strong> Inteligencia
+              documental para eliminar carga manual, transformando procesos
+              analógicos en digitales.
+            </li>
+            <li data-i18n="techFeat5">
+              <i class="fa-solid fa-link"></i>
+              <strong>Interoperabilidad:</strong> Comunicación eficiente FastAPI
+              + React mediante API REST documentada, desarrollo ágil y
+              escalable.
+            </li>
+            <li data-i18n="techFeat6">
+              <i class="fa-solid fa-shield"></i>
+              <strong>Gestión Cloud Segura:</strong> Arquitectura de
+              persistencia en Azure optimizada para seguridad y disponibilidad
+              de datos.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION: IMPACT & BUSINESS -->
+      <section id="impacto" aria-label="Impacto y capacidades">
+        <h2 data-i18n="impactAndBizTitle">Impacto en Negocio</h2>
+        <div class="grid-two">
+          <article class="card impact-card">
+            <h3 data-i18n="impactTitle">
+              <i class="fa-solid fa-chart-line"></i> Impacto Empresarial
+            </h3>
+            <ul>
+              <li data-i18n="impact1">
+                <i class="fa-solid fa-check"></i> Reduce roturas de stock y
+                sobreproducción
+              </li>
+              <li data-i18n="impact2">
+                <i class="fa-solid fa-check"></i> Mejora la planificación de
+                turnos y recursos
+              </li>
+              <li data-i18n="impact3">
+                <i class="fa-solid fa-check"></i> Aumenta margen al ajustar
+                compras a demanda real
+              </li>
+              <li data-i18n="impact4">
+                <i class="fa-solid fa-check"></i> Eleva la calidad de servicio
+                en horas punta
+              </li>
+            </ul>
+          </article>
+
+          <article class="card impact-card">
+            <h3 data-i18n="techTitle">
+              <i class="fa-solid fa-wrench"></i> Stack Técnico
+            </h3>
+            <ul>
+              <li>
+                <i class="fa-brands fa-python"></i> <strong>Python</strong> +
+                <strong>Pandas</strong> + <strong>Scikit-Learn</strong>
+              </li>
+              <li>
+                <i class="fa-solid fa-sliders"></i>
+                <strong>Feature Engineering</strong> para series temporales
+              </li>
+              <li>
+                <i class="fa-solid fa-chart-bar"></i>
+                <strong>Evaluación de modelos</strong> con MAE/RMSE
+              </li>
+              <li>
+                <i class="fa-solid fa-eye"></i>
+                <strong>Visualización</strong> de predicciones operativas
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION: GALLERY -->
+      <section id="galeria" aria-labelledby="gallery-title">
+        <h2 id="gallery-title" data-i18n="galeriaTitle">
+          Galería de Proyectos
+        </h2>
+        <div class="carousel-container">
+          <div class="carousel">
+            <img
+              src="./icons/AmlCousineFoto1.png"
+              alt="Cuisine AML 1"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto2.png"
+              alt="Cuisine AML 2"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto3.png"
+              alt="Cuisine AML 3"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto4.png"
+              alt="Cuisine AML 4"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto5.png"
+              alt="Cuisine AML 5"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto6.png"
+              alt="Cuisine AML 6"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto7.png"
+              alt="Cuisine AML 7"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto8.png"
+              alt="Cuisine AML 8"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto9.png"
+              alt="Cuisine AML 9"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto10.png"
+              alt="Cuisine AML 10"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto11.png"
+              alt="Cuisine AML 11"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./icons/AmlCousineFoto12.png"
+              alt="Cuisine AML 12"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <button class="carousel-arrow left" aria-label="Anterior">
+            &#10094;
+          </button>
+          <button class="carousel-arrow right" aria-label="Siguiente">
+            &#10095;
+          </button>
+          <div class="carousel-dots" aria-label="Selector de diapositiva"></div>
+        </div>
+        <p data-i18n="galeriaInstruction">
+          Haz clic en cualquier imagen para verla en detalle.
+        </p>
+      </section>
+    </main>
+
+    <!-- MODAL PARA AMPLIAR IMAGEN -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <button
+          class="modal-arrow modal-arrow-left"
+          aria-label="Imagen anterior"
+        >
+          &#10094;
+        </button>
+        <img id="modal-image" src="" alt="Imagen ampliada" />
+        <button
+          class="modal-arrow modal-arrow-right"
+          aria-label="Imagen siguiente"
+        >
+          &#10095;
+        </button>
+        <span class="modal-close" aria-label="Cerrar modal">&times;</span>
+      </div>
+    </div>
+
+    <footer>
+      <p data-i18n="footer">
+        Proyecto Cuisine AML - Data, Backend y IA aplicado de verdad.
+      </p>
+    </footer>
+
+    <script>
+      const translations = {
+        es: {
+          skipToMain: "Saltar al contenido principal",
+          backHome: "Inicio",
+          badge: "Full-Stack Platform",
+          title: "Cuisine AML",
+          subtitle:
+            "Plataforma predictiva Full-Stack: Automatización de IA y Dashboards interactivos para hostelería.",
+          welcomeTitle: "Bienvenido a Cuisine AML",
+          welcomeText1:
+            "Este proyecto fue mi gran campo de pruebas para unir todo lo aprendido: desde el desarrollo de interfaces modernas en React hasta la ingeniería de datos en la nube. Mi objetivo no era solo predecir ventas, sino crear una herramienta que un restaurador pudiera usar de verdad en su día a día.",
+          welcomeText2:
+            "Fue un reto de humildad técnica. Aprendí que de nada sirve tener un modelo de AutoML avanzado en la nube si no eres capaz de visualizar esos resultados de forma clara. Conectar los pipelines automatizados de Azure con un frontend dinámico me enseñó a gestionar el flujo completo del dato, desde un ticket físico procesado por OCR hasta una gráfica de tendencia en pantalla.",
+          aboutTitle: "Acerca de Cuisine AML",
+          aboutDesc:
+            "Cuisine AML es una solución integral que automatiza la ingesta de datos y ofrece previsiones de demanda en tiempo real. Utiliza servicios cognitivos para digitalizar información y modelos de aprendizaje automático para predecir servicios y platos, presentando todo en un panel de control intuitivo.",
+          featuresTitle: "Funciones destacadas",
+          feature1TitleShort: "Visualización Dinámica:",
+          feature1Desc:
+            "Dashboards interactivos en React para el seguimiento de tendencias.",
+          feature2TitleShort: "Digitalización OCR:",
+          feature2Desc:
+            "Extracción automática de datos mediante Azure Document Intelligence.",
+          feature3TitleShort: "Predicción AutoML:",
+          feature3Desc:
+            "Modelos de forecasting optimizados para prever demanda.",
+          feature4TitleShort: "Arquitectura Desacoplada:",
+          feature4Desc:
+            "Backend ágil con FastAPI y documentación automática Swagger.",
+          feature5TitleShort: "Pipelines de IA:",
+          feature5Desc:
+            "Automatización total del entrenamiento y despliegue en Azure.",
+          feature6TitleShort: "Ecosistema Cloud:",
+          feature6Desc:
+            "Almacenamiento y gestión en Azure SQL Server y Storage.",
+          techTableTitle: "Tecnologías Utilizadas",
+          techFrontend: "Frontend",
+          techBackend: "Backend & API",
+          techAI: "IA & Automatización",
+          techData: "Datos & Cloud",
+          techFeaturesTitle: "Características Técnicas del Sistema",
+          techFeat1:
+            "Flujo de Datos End-to-End: Integración completa desde captura (OCR) hasta visualización frontend, garantizando integridad del dato.",
+          techFeat2:
+            "Dashboards de Alta Performance: Interfaces reactivas en React para filtrar y analizar predicciones con fluidez.",
+          techFeat3:
+            "Automatización con Pipelines: Flujos que automatizan re-entrenamiento de modelos sin intervención manual.",
+          techFeat4:
+            "Servicios Cognitivos Azure: Inteligencia documental para eliminar carga manual, transformando procesos analógicos en digitales.",
+          techFeat5:
+            "Interoperabilidad: Comunicación eficiente FastAPI + React mediante API REST documentada, desarrollo ágil y escalable.",
+          techFeat6:
+            "Gestión Cloud Segura: Arquitectura de persistencia en Azure optimizada para seguridad y disponibilidad de datos.",
+          impactAndBizTitle: "Impacto en Negocio",
+          impactTitle: "Impacto Empresarial",
+          impact1: "Reduce roturas de stock y sobreproducción",
+          impact2: "Mejora la planificación de turnos y recursos",
+          impact3: "Aumenta margen al ajustar compras a demanda real",
+          impact4: "Eleva la calidad de servicio en horas punta",
+          techTitle: "Stack Técnico",
+          galeriaTitle: "Galería de Proyectos",
+          galeriaInstruction:
+            "Haz clic en cualquier imagen para verla en detalle.",
+          footer:
+            "Proyecto Cuisine AML - Data, Backend y IA aplicado de verdad.",
+        },
+        en: {
+          skipToMain: "Skip to main content",
+          backHome: "Home",
+          badge: "Full-Stack Platform",
+          title: "Cuisine AML",
+          subtitle:
+            "Full-Stack Predictive Platform: AI Automation & Interactive Dashboards for Hospitality.",
+          welcomeTitle: "Welcome to Cuisine AML",
+          welcomeText1:
+            "This project was my great testing ground to bring together everything I've learned: from developing modern interfaces in React to cloud data engineering. My goal wasn't just to predict sales, but to create a tool that a restaurant owner could actually use in their daily operations.",
+          welcomeText2:
+            "It was a challenge of technical humility. I learned that having an advanced AutoML model in the cloud means nothing if you can't visualize those results clearly. Connecting automated Azure pipelines with a dynamic frontend taught me how to manage the complete data flow, from a physical ticket processed by OCR to a trend chart on screen.",
+          aboutTitle: "About Cuisine AML",
+          aboutDesc:
+            "Cuisine AML is a comprehensive solution that automates data ingestion and delivers real-time demand forecasting. It uses cognitive services to digitize information and machine learning models to predict services and dishes, presenting everything in an intuitive control panel.",
+          featuresTitle: "Key Features",
+          feature1TitleShort: "Dynamic Visualization:",
+          feature1Desc:
+            "Interactive React dashboards for tracking trends and forecasts.",
+          feature2TitleShort: "OCR Digitization:",
+          feature2Desc:
+            "Automatic data extraction via Azure Document Intelligence.",
+          feature3TitleShort: "AutoML Forecasting:",
+          feature3Desc: "Optimized forecasting models to predict demand.",
+          feature4TitleShort: "Decoupled Architecture:",
+          feature4Desc:
+            "Agile backend with FastAPI and automatic Swagger documentation.",
+          feature5TitleShort: "AI Pipelines:",
+          feature5Desc:
+            "Full automation of model training and deployment in Azure.",
+          feature6TitleShort: "Cloud Ecosystem:",
+          feature6Desc:
+            "Storage and management on Azure SQL Server and Storage.",
+          techTableTitle: "Technologies Used",
+          techFrontend: "Frontend",
+          techBackend: "Backend & API",
+          techAI: "AI & Automation",
+          techData: "Data & Cloud",
+          techFeaturesTitle: "Technical System Features",
+          techFeat1:
+            "End-to-End Data Flow: Complete integration from capture (OCR) to frontend visualization, ensuring data integrity.",
+          techFeat2:
+            "High-Performance Dashboards: Reactive interfaces in React to filter and analyze forecasts smoothly.",
+          techFeat3:
+            "Automation with Pipelines: Flows that automate model retraining without manual intervention.",
+          techFeat4:
+            "Azure Cognitive Services: Document intelligence to eliminate manual data entry, transforming analog processes to digital.",
+          techFeat5:
+            "Interoperability: Efficient FastAPI + React communication via documented REST API, agile and scalable development.",
+          techFeat6:
+            "Secure Cloud Management: Persistence architecture in Azure optimized for security and data availability.",
+          impactAndBizTitle: "Business Impact",
+          impactTitle: "Business Impact",
+          impact1: "Reduces stockouts and overproduction",
+          impact2: "Improves shift and resource planning",
+          impact3: "Increases margin by aligning purchases with real demand",
+          impact4: "Improves service quality during peak hours",
+          techTitle: "Technical Stack",
+          galeriaTitle: "Project Gallery",
+          galeriaInstruction: "Click any image to view it in detail.",
+          footer: "Cuisine AML project - Applied Data, Backend and AI.",
+        },
+      };
+
+      let currentLang = "es";
+
+      function updateLanguage() {
+        document.documentElement.lang = currentLang;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          const value =
+            translations[currentLang] && translations[currentLang][key];
+          if (value) el.textContent = value;
+        });
+      }
+
+      const langToggle = document.getElementById("lang-toggle");
+      langToggle.addEventListener("click", () => {
+        currentLang = currentLang === "es" ? "en" : "es";
+        langToggle.textContent = currentLang === "es" ? "EN" : "ES";
+        langToggle.setAttribute(
+          "aria-label",
+          currentLang === "es" ? "Switch language" : "Cambiar idioma",
+        );
+        updateLanguage();
+      });
+
+      updateLanguage();
+
+      // Carrusel manual + autoplay robusto
+      const carousel = document.querySelector(".carousel");
+      const images = document.querySelectorAll(".carousel img");
+      const leftArrow = document.querySelector(".carousel-arrow.left");
+      const rightArrow = document.querySelector(".carousel-arrow.right");
+      const carouselContainer = document.querySelector(".carousel-container");
+      const dotsContainer = document.querySelector(".carousel-dots");
+      let index = 0;
+      const totalImages = images.length;
+      let autoPlayInterval = null;
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      const hasCarousel =
+        carousel && leftArrow && rightArrow && totalImages > 0;
+
+      function showImage(i) {
+        if (!hasCarousel) return;
+        const imageWidth = images[0].offsetWidth;
+        carousel.style.transform = `translateX(${-i * imageWidth}px)`;
+        if (dotsContainer) {
+          dotsContainer
+            .querySelectorAll(".carousel-dot")
+            .forEach((dot, dotIndex) => {
+              dot.classList.toggle("active", dotIndex === index);
+            });
+        }
+      }
+
+      function nextImage() {
+        if (!hasCarousel) return;
+        index = (index + 1) % totalImages;
+        showImage(index);
+      }
+
+      function prevImage() {
+        if (!hasCarousel) return;
+        index = (index - 1 + totalImages) % totalImages;
+        showImage(index);
+      }
+
+      function stopAutoPlay() {
+        if (autoPlayInterval) {
+          clearInterval(autoPlayInterval);
+          autoPlayInterval = null;
+        }
+      }
+
+      function startAutoPlay() {
+        if (!hasCarousel || autoPlayInterval || totalImages < 2) return;
+        autoPlayInterval = setInterval(nextImage, 5000);
+      }
+
+      function renderDots() {
+        if (!dotsContainer || totalImages < 2) return;
+        dotsContainer.innerHTML = "";
+        for (let i = 0; i < totalImages; i += 1) {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "carousel-dot";
+          dot.setAttribute("aria-label", `Ir a imagen ${i + 1}`);
+          dot.addEventListener("click", () => {
+            index = i;
+            showImage(index);
+            stopAutoPlay();
+            startAutoPlay();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function handleSwipe() {
+        if (touchStartX - touchEndX > 50) {
+          nextImage();
+        } else if (touchEndX - touchStartX > 50) {
+          prevImage();
+        }
+      }
+
+      if (hasCarousel) {
+        renderDots();
+
+        rightArrow.addEventListener("click", () => {
+          nextImage();
+          stopAutoPlay();
+          startAutoPlay();
+        });
+
+        leftArrow.addEventListener("click", () => {
+          prevImage();
+          stopAutoPlay();
+          startAutoPlay();
+        });
+
+        carousel.addEventListener("mouseenter", stopAutoPlay);
+        carousel.addEventListener("mouseleave", startAutoPlay);
+
+        if (carouselContainer) {
+          carouselContainer.addEventListener(
+            "touchstart",
+            (e) => {
+              touchStartX = e.changedTouches[0].screenX;
+              stopAutoPlay();
+            },
+            { passive: true },
+          );
+          carouselContainer.addEventListener(
+            "touchend",
+            (e) => {
+              touchEndX = e.changedTouches[0].screenX;
+              handleSwipe();
+              startAutoPlay();
+            },
+            { passive: true },
+          );
+        }
+
+        document.addEventListener("visibilitychange", () => {
+          if (document.hidden) stopAutoPlay();
+          else startAutoPlay();
+        });
+
+        showImage(index);
+        startAutoPlay();
+      }
+
+      // Modal para ampliar imagen y navegación dentro del modal
+      let currentModalIndex = 0;
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modal-image");
+      const modalClose = document.querySelector(".modal-close");
+      const modalArrowLeft = document.querySelector(".modal-arrow-left");
+      const modalArrowRight = document.querySelector(".modal-arrow-right");
+      const hasModal =
+        modal &&
+        modalImage &&
+        modalClose &&
+        modalArrowLeft &&
+        modalArrowRight &&
+        totalImages > 0;
+
+      if (hasModal) {
+        images.forEach((img, i) => {
+          img.addEventListener("click", () => {
+            currentModalIndex = i;
+            modal.classList.add("active");
+            modalImage.src = img.src;
+            stopAutoPlay();
+          });
+        });
+      }
+
+      function updateModalImage(index) {
+        if (!hasModal) return;
+        modalImage.src = images[index].src;
+      }
+
+      if (hasModal) {
+        modalArrowLeft.addEventListener("click", (e) => {
+          e.stopPropagation();
+          currentModalIndex =
+            (currentModalIndex - 1 + totalImages) % totalImages;
+          updateModalImage(currentModalIndex);
+        });
+
+        modalArrowRight.addEventListener("click", (e) => {
+          e.stopPropagation();
+          currentModalIndex = (currentModalIndex + 1) % totalImages;
+          updateModalImage(currentModalIndex);
+        });
+
+        modalClose.addEventListener("click", () => {
+          modal.classList.remove("active");
+          startAutoPlay();
+        });
+
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("active");
+            startAutoPlay();
+          }
+        });
+      }
+
+      // Cerrar modal con tecla Escape y navegación con flechas del teclado
+      document.addEventListener("keydown", (e) => {
+        if (!hasModal) return;
+        if (modal.classList.contains("active")) {
+          if (e.key === "Escape") {
+            modal.classList.remove("active");
+            startAutoPlay();
+          } else if (e.key === "ArrowLeft") {
+            currentModalIndex =
+              (currentModalIndex - 1 + totalImages) % totalImages;
+            updateModalImage(currentModalIndex);
+          } else if (e.key === "ArrowRight") {
+            currentModalIndex = (currentModalIndex + 1) % totalImages;
+            updateModalImage(currentModalIndex);
+          }
+        }
+      });
+
+      // Ajuste del carrusel al redimensionar la ventana
+      window.addEventListener("resize", () => {
+        if (hasCarousel) showImage(index);
+      });
+    </script>
+  </body>
+</html>
