@@ -4,43 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adnan Portfolio - Desarrollador Innovador</title>
-    <!-- Tipografias -->
+    <title>Adnan Portfolio | Backend, Data and AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Sora:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-
   <body>
     <a class="skip-link" href="#main-content" data-i18n="skipToMain"
       >Saltar al contenido principal</a
     >
-    <!-- BARRA DE NAVEGACIÓN -->
-    <nav aria-label="Navegación principal">
-      <div class="logo">Adnan Portfolio</div>
+
+    <nav class="site-nav" aria-label="Navegacion principal">
+      <a class="brand" href="#home" aria-label="Ir al inicio">ADNAN</a>
+
       <button
         class="hamburger"
         type="button"
-        aria-label="Abrir menú de navegación"
+        aria-label="Abrir menu de navegacion"
         aria-controls="main-menu"
         aria-expanded="false"
       >
         <span></span>
         <span></span>
-        <span></span>
       </button>
-      <ul id="main-menu">
-        <li><a href="#sobre-mi" data-i18n="navAbout">Sobre mí</a></li>
+
+      <ul id="main-menu" class="nav-links">
+        <li><a href="#sobre-mi" data-i18n="navAbout">Sobre mi</a></li>
         <li><a href="#proyectos" data-i18n="navProjects">Proyectos</a></li>
         <li><a href="#contacto" data-i18n="navContact">Contacto</a></li>
       </ul>
-      <!-- Switch de idioma integrado en el nav -->
+
       <button
         id="lang-switch"
+        class="lang-switch"
         type="button"
         aria-label="Cambiar idioma"
         aria-live="polite"
@@ -49,91 +49,76 @@
       </button>
     </nav>
 
-    <!-- HEADER -->
-    <header>
-      <div class="hero-content">
-        <p class="hero-eyebrow" data-i18n="heroEyebrow">Portfolio Engineer</p>
-        <h1>Adnan Hamidoun El Habti</h1>
-        <p data-i18n="heroSubtitle">
-          Desarrollador Java & Spring | Eficiencia, estructura y visión técnica
+    <header id="home" class="hero reveal">
+      <div class="hero-shell">
+        <p class="hero-eyebrow" data-i18n="heroEyebrow">
+          Backend Data and AI Engineer
         </p>
+        <h1>Adnan Hamidoun El Habti</h1>
+        <p class="hero-status" data-i18n="heroStatus">
+          Soluciones robustas, datos utiles e IA aplicada.
+        </p>
+
         <div class="hero-actions">
           <a
-            class="hero-btn primary"
+            class="btn btn-primary"
             href="#proyectos"
             data-i18n="heroCtaProjects"
             >Ver Proyectos</a
           >
-          <a
-            class="hero-btn secondary"
-            href="#contacto"
-            data-i18n="heroCtaContact"
+          <a class="btn btn-ghost" href="#contacto" data-i18n="heroCtaContact"
             >Contactar</a
           >
-        </div>
-        <div class="hero-metrics" aria-label="Indicadores rápidos">
-          <div class="metric-chip" data-i18n="heroMetric1">
-            6 Certificaciones Azure
-          </div>
-          <div class="metric-chip" data-i18n="heroMetric2">
-            4 Proyectos End-to-End
-          </div>
-          <div class="metric-chip" data-i18n="heroMetric3">
-            Backend + Data + IA
-          </div>
         </div>
       </div>
     </header>
 
     <main id="main-content">
-      <!-- SECCIÓN: SOBRE MÍ -->
       <section
         id="sobre-mi"
-        class="container reveal"
+        class="section reveal"
         aria-labelledby="about-heading"
       >
-        <div class="sobre-mi-contenedor">
-          <img
-            src="./icons/fotoCurriculum.jpg"
-            alt="Foto de Adnan"
-            class="perfil"
-          />
-          <div>
-            <h2
-              id="about-heading"
-              class="section-heading"
-              data-i18n="aboutTitle"
-            >
-              Sobre mí
-            </h2>
-            <p class="section-lead" data-i18n="aboutLead">
-              Perfil orientado a producto, arquitectura robusta y colaboración
-              real de equipo.
-            </p>
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="aboutKicker">
+            Perfil profesional
+          </p>
+          <h2 id="about-heading" data-i18n="aboutTitle">Sobre mi</h2>
+          <p class="section-intro" data-i18n="aboutIntro">
+            Desarrollo backend, datos e inteligencia artificial con foco en
+            impacto real.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-photo-wrap">
+            <img
+              src="./icons/fotoCurriculum.jpg"
+              alt="Foto de Adnan"
+              class="about-photo"
+            />
+          </div>
+
+          <div class="about-copy">
             <p data-i18n="aboutText1">
               "Nadie es mejor que nadie; simplemente somos piezas distintas de
-              un mismo engranaje." Creo firmemente que el éxito de un proyecto
+              un mismo engranaje." Creo firmemente que el exito de un proyecto
               no depende de un "genio" solitario, sino de la capacidad de un
-              equipo para combinar sus fortalezas. Mi enfoque no es ser el que
-              más sabe, sino ser el que mejor suma.
+              equipo para combinar sus fortalezas.
             </p>
             <p data-i18n="aboutText2">
               Vengo del mundo del desarrollo multiplataforma (DAM), lo que me
-              dio una base sólida en la construcción de software real. Mi
-              curiosidad por entender el valor de la información me llevó a
-              especializarme con un Máster en Big Data e IA. Aunque cuento con 6
-              certificaciones oficiales en el ecosistema de Azure, las veo como
-              herramientas de aprendizaje continuo, no como metas finales.
+              dio una base solida para construir software real. Mi curiosidad
+              por entender el valor de la informacion me llevo a especializarme
+              con un Master en Big Data e IA.
             </p>
             <p data-i18n="aboutText3">
-              Me considero una persona comunicativa que disfruta escuchando y
-              aprendiendo de los demás. Mi objetivo es aportar mi granito de
-              arena en el Backend y el mundo de los Datos, siempre con la
-              humildad de saber que cada interacción con un compañero es una
-              oportunidad para mejorar.
+              Me considero una persona comunicativa, orientada al Backend y al
+              mundo de los Datos, con la humildad de seguir aprendiendo en cada
+              colaboracion.
             </p>
             <a
-              class="button-cv"
+              class="btn btn-primary btn-cv"
               href="./icons/cv.pdf"
               download
               target="_blank"
@@ -144,238 +129,164 @@
           </div>
         </div>
 
-        <h3
-          id="skills-heading"
-          class="section-heading section-title"
-          data-i18n="aboutSkills"
-        >
-          🛠️ Ecosistema Tecnológico
-        </h3>
-        <div
-          class="skills-grid ecosystem-grid"
-          role="region"
-          aria-labelledby="skills-heading"
-        >
-          <div class="skill-box">
-            <h4 data-i18n="ecoDataTitle">📊 Ingeniería de Datos y Analítica</h4>
-            <div class="tech-items ecosystem-items">
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/fabric.png" alt="Microsoft Fabric" />
-                <span>Microsoft Fabric</span>
+        <div class="tech-cert-shell">
+          <div class="tech-panel">
+            <h3 data-i18n="techPanelTitle">He trabajado con</h3>
+            <div class="tech-icon-grid">
+              <div class="tech-icon-item">
+                <img src="./icons/fabric.png" alt="Microsoft Fabric" /><span
+                  >Fabric</span
+                >
               </div>
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/databricks.png" alt="Databricks y Spark" />
-                <span>Spark + Databricks</span>
+              <div class="tech-icon-item">
+                <img src="./icons/databricks.png" alt="Databricks" /><span
+                  >Databricks</span
+                >
               </div>
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/scala.png" alt="Scala" />
-                <span>Scala</span>
+              <div class="tech-icon-item">
+                <img src="./icons/scala.png" alt="Scala" /><span>Scala</span>
               </div>
-            </div>
-          </div>
-
-          <div class="skill-box">
-            <h4 data-i18n="ecoAiTitle">🤖 IA y Machine Learning</h4>
-            <div class="tech-items ecosystem-items">
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/python.png" alt="Python" />
-                <span>Python</span>
+              <div class="tech-icon-item">
+                <img src="./icons/python.png" alt="Python" /><span>Python</span>
               </div>
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/jupyter.png" alt="Scikit-Learn y Pandas" />
-                <span>Scikit-Learn + Pandas</span>
+              <div class="tech-icon-item">
+                <img
+                  src="./icons/jupyter.png"
+                  alt="Scikit Learn y Pandas"
+                /><span>Scikit / Pandas</span>
               </div>
-            </div>
-          </div>
-
-          <div class="skill-box">
-            <h4 data-i18n="ecoBackendTitle">⚙️ Backend y Arquitectura</h4>
-            <div class="tech-items ecosystem-items">
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/java.png" alt="Java" />
-                <span>Java</span>
+              <div class="tech-icon-item">
+                <img src="./icons/java.png" alt="Java" /><span>Java</span>
               </div>
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/spring.png" alt="Spring Boot" />
-                <span>Spring Boot</span>
+              <div class="tech-icon-item">
+                <img src="./icons/spring.png" alt="Spring Boot" /><span
+                  >Spring</span
+                >
               </div>
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/scala.png" alt="Scala" />
-                <span>Scala</span>
+              <div class="tech-icon-item">
+                <img src="./icons/api.png" alt="API REST" /><span
+                  >API REST</span
+                >
               </div>
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/api.png" alt="APIs REST" />
-                <span>APIs REST</span>
+              <div class="tech-icon-item">
+                <img src="./icons/azure.png" alt="Azure" /><span>Azure</span>
+              </div>
+              <div class="tech-icon-item">
+                <img src="./icons/docker.png" alt="Docker" /><span>Docker</span>
+              </div>
+              <div class="tech-icon-item">
+                <img src="./icons/git.png" alt="Git" /><span>Git</span>
+              </div>
+              <div class="tech-icon-item">
+                <img src="./icons/github.png" alt="GitHub" /><span>GitHub</span>
               </div>
             </div>
           </div>
 
-          <div class="skill-box">
-            <h4 data-i18n="ecoCloudTitle">☁️ Cloud, DevOps y Calidad</h4>
-            <div class="tech-items ecosystem-items">
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/azure.png" alt="Microsoft Azure" />
-                <span>Azure</span>
-              </div>
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/docker.png" alt="Docker" />
-                <span>Docker</span>
-              </div>
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/git.png" alt="Git" />
-                <span>Git</span>
-              </div>
-              <div class="tech-item ecosystem-item">
-                <img src="./icons/github.png" alt="GitHub" />
-                <span>GitHub</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill-box certifications-box">
-            <h4 data-i18n="certTitle">📜 Certificaciones Oficiales</h4>
-            <div class="cert-groups">
-              <div class="cert-group">
-                <h5 class="cert-group-title" data-i18n="certGroupData">
-                  Datos y Analítica
-                </h5>
-                <div class="tech-items cert-grid">
-                  <a
-                    class="tech-item cert-item cert-link"
-                    href="https://learn.microsoft.com/credentials/certifications/exams/dp-600/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="./icons/dp600.png"
-                      alt="DP-600 Microsoft Fabric Analytics Engineer Associate"
-                    />
-                    <span class="cert-code">DP-600</span>
-                    <span class="cert-name" data-i18n="certDP600Name"
-                      >Fabric Analytics Engineer Associate</span
-                    >
-                  </a>
-                  <a
-                    class="tech-item cert-item cert-link"
-                    href="https://learn.microsoft.com/credentials/certifications/exams/dp-700/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="./icons/dp700.png"
-                      alt="DP-700 Microsoft Fabric Data Engineer Associate"
-                    />
-                    <span class="cert-code">DP-700</span>
-                    <span class="cert-name" data-i18n="certDP700Name"
-                      >Fabric Data Engineer Associate</span
-                    >
-                  </a>
-                </div>
-              </div>
-              <div class="cert-group">
-                <h5 class="cert-group-title" data-i18n="certGroupAi">
-                  IA y Ciencia de Datos
-                </h5>
-                <div class="tech-items cert-grid">
-                  <a
-                    class="tech-item cert-item cert-link"
-                    href="https://learn.microsoft.com/credentials/certifications/exams/ai-102/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="./icons/ai102.png"
-                      alt="AI-102 Azure AI Engineer Associate"
-                    />
-                    <span class="cert-code">AI-102</span>
-                    <span class="cert-name" data-i18n="certAI102Name"
-                      >Azure AI Engineer Associate</span
-                    >
-                  </a>
-                  <a
-                    class="tech-item cert-item cert-link"
-                    href="https://learn.microsoft.com/credentials/certifications/exams/dp-100/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="./icons/dp100.png"
-                      alt="DP-100 Azure Data Scientist Associate"
-                    />
-                    <span class="cert-code">DP-100</span>
-                    <span class="cert-name" data-i18n="certDP100Name"
-                      >Azure Data Scientist Associate</span
-                    >
-                  </a>
-                </div>
-              </div>
-              <div class="cert-group">
-                <h5 class="cert-group-title" data-i18n="certGroupInfra">
-                  Infraestructura y Datos
-                </h5>
-                <div class="tech-items cert-grid">
-                  <a
-                    class="tech-item cert-item cert-link"
-                    href="https://learn.microsoft.com/credentials/certifications/exams/dp-300/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="./icons/dp300.png"
-                      alt="DP-300 Azure Database Administrator Associate"
-                    />
-                    <span class="cert-code">DP-300</span>
-                    <span class="cert-name" data-i18n="certDP300Name"
-                      >Azure Database Administrator Associate</span
-                    >
-                  </a>
-                  <a
-                    class="tech-item cert-item cert-link"
-                    href="https://learn.microsoft.com/credentials/certifications/exams/dp-900/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="./icons/dp900.png"
-                      alt="DP-900 Azure Data Fundamentals"
-                    />
-                    <span class="cert-code">DP-900</span>
-                    <span class="cert-name" data-i18n="certDP900Name"
-                      >Azure Data Fundamentals</span
-                    >
-                  </a>
-                </div>
-              </div>
+          <div class="cert-panel">
+            <h3 data-i18n="certPanelTitle">Certificaciones oficiales</h3>
+            <div class="cert-grid">
+              <a
+                class="cert-item"
+                href="https://learn.microsoft.com/credentials/certifications/exams/dp-600/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./icons/dp600.png" alt="DP 600" />
+                <span class="cert-code">DP-600</span>
+                <span class="cert-name" data-i18n="certDP600Name"
+                  >Fabric Analytics Engineer Associate</span
+                >
+              </a>
+              <a
+                class="cert-item"
+                href="https://learn.microsoft.com/credentials/certifications/exams/dp-700/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./icons/dp700.png" alt="DP 700" />
+                <span class="cert-code">DP-700</span>
+                <span class="cert-name" data-i18n="certDP700Name"
+                  >Fabric Data Engineer Associate</span
+                >
+              </a>
+              <a
+                class="cert-item"
+                href="https://learn.microsoft.com/credentials/certifications/exams/ai-102/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./icons/ai102.png" alt="AI 102" />
+                <span class="cert-code">AI-102</span>
+                <span class="cert-name" data-i18n="certAI102Name"
+                  >Azure AI Engineer Associate</span
+                >
+              </a>
+              <a
+                class="cert-item"
+                href="https://learn.microsoft.com/credentials/certifications/exams/dp-100/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./icons/dp100.png" alt="DP 100" />
+                <span class="cert-code">DP-100</span>
+                <span class="cert-name" data-i18n="certDP100Name"
+                  >Azure Data Scientist Associate</span
+                >
+              </a>
+              <a
+                class="cert-item"
+                href="https://learn.microsoft.com/credentials/certifications/exams/dp-300/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./icons/dp300.png" alt="DP 300" />
+                <span class="cert-code">DP-300</span>
+                <span class="cert-name" data-i18n="certDP300Name"
+                  >Azure Database Administrator Associate</span
+                >
+              </a>
+              <a
+                class="cert-item"
+                href="https://learn.microsoft.com/credentials/certifications/exams/dp-900/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./icons/dp900.png" alt="DP 900" />
+                <span class="cert-code">DP-900</span>
+                <span class="cert-name" data-i18n="certDP900Name"
+                  >Azure Data Fundamentals</span
+                >
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SECCIÓN: PROYECTOS -->
       <section
         id="proyectos"
-        class="container reveal"
+        class="section reveal"
         aria-labelledby="projects-heading"
       >
-        <h2
-          id="projects-heading"
-          class="section-heading"
-          data-i18n="projectsTitle"
-        >
-          Mis Proyectos
-        </h2>
-        <p class="projects-intro" data-i18n="projectsIntro">
-          Soluciones reales enfocadas en arquitectura limpia, rendimiento y
-          experiencia de usuario.
-        </p>
-        <div class="proyectos-container">
-          <a href="channelcast.html" class="proyecto">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="projectsKicker">
+            Trabajo reciente
+          </p>
+          <h2 id="projects-heading" data-i18n="projectsTitle">Mis Proyectos</h2>
+          <p class="section-intro" data-i18n="projectsIntro">
+            Proyectos construidos de extremo a extremo, con criterio tecnico y
+            orientacion a producto.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <a href="channelcast.html" class="project-card">
             <img
               src="./icons/chanelCast.png"
               alt="ChannelCast"
-              class="proyecto-imagen"
+              class="project-image"
             />
-            <div class="proyecto-info">
+            <div class="project-content">
               <span class="project-tag" data-i18n="projectTagRealtime"
                 >Tiempo Real</span
               >
@@ -384,169 +295,154 @@
               </h3>
               <p data-i18n="project1Desc">
                 Chat en tiempo real con Java y sockets, simulando un sistema
-                moderno de mensajería.
+                moderno de mensajeria.
               </p>
             </div>
           </a>
-          <a href="fixOnDemand.html" class="proyecto">
+
+          <a href="fixOnDemand.html" class="project-card">
             <img
               src="./icons/fixOndemand.jpg"
               alt="FixOnDemand"
-              class="proyecto-imagen"
+              class="project-image"
             />
-            <div class="proyecto-info">
+            <div class="project-content">
               <span class="project-tag" data-i18n="projectTagService"
-                >Operación IT</span
+                >Operacion IT</span
               >
               <h3 data-i18n="project2Title">
                 FixOnDemand: App de Ticketing de Incidencias
               </h3>
               <p data-i18n="project2Desc">
-                Gestión de incidencias para empresas con registro, asignación y
+                Gestion de incidencias para empresas con registro, asignacion y
                 seguimiento de tickets.
               </p>
             </div>
           </a>
-          <!-- Nuevo proyecto: M&A Bank -->
-          <a href="maBank.html" class="proyecto">
+
+          <a href="maBank.html" class="project-card">
             <img
               src="./icons/maBank.jpg"
-              alt="M&A Bank"
-              class="proyecto-imagen"
+              alt="M and A Bank"
+              class="project-image"
             />
-            <div class="proyecto-info">
+            <div class="project-content">
               <span class="project-tag" data-i18n="projectTagFintech"
                 >FinTech</span
               >
               <h3 data-i18n="project3Title">
-                M&A Bank: Aplicación Bancaria Multidivisa
+                M and A Bank: Aplicacion Bancaria Multidivisa
               </h3>
               <p data-i18n="project3Desc">
-                Aplicación bancaria completa con login seguro, gestión de
-                cuentas en varias monedas, envío de dinero, conversión de
-                divisas en tiempo real y chatbot con IA.
+                Aplicacion bancaria completa con login seguro, gestion de
+                cuentas en varias monedas y chatbot con IA.
               </p>
             </div>
           </a>
-          <a href="amlCuisine.html" class="proyecto">
+
+          <a href="amlCuisine.html" class="project-card">
             <img
               src="./icons/cuisineaml.png"
               alt="Cuisine AML"
-              class="proyecto-imagen"
+              class="project-image"
             />
-            <div class="proyecto-info">
+            <div class="project-content">
               <span class="project-tag" data-i18n="projectTagAnalytics"
-                >Analítica Predictiva</span
+                >Analitica Predictiva</span
               >
               <h3 data-i18n="project4Title">
-                Cuisine AML: Predicción Inteligente de Demanda
+                Cuisine AML: Prediccion Inteligente de Demanda
               </h3>
               <p data-i18n="project4Desc">
-                Solución de analítica predictiva para hostelería que anticipa la
-                afluencia por servicio y la demanda de platos, optimizando
-                compras, preparación y asignación de recursos en cocina y sala.
+                Solucion predictiva para hosteleria que anticipa afluencia y
+                demanda para optimizar recursos.
               </p>
             </div>
           </a>
         </div>
       </section>
 
-      <!-- SECCIÓN: CONTACTO -->
       <section
         id="contacto"
-        class="container reveal"
+        class="section reveal"
         aria-labelledby="contact-heading"
       >
-        <h2 id="contact-heading" class="sr-only" data-i18n="contactTitle">
-          Contacto
-        </h2>
-        <div class="contact-wrapper">
-          <div class="contact-info">
-            <p class="contact-kicker" data-i18n="contactKicker">
-              Disponible para colaboraciones serias
-            </p>
-            <p data-i18n="contactText">
-              ¿Tienes alguna consulta o propuesta? ¡Hablemos!
-            </p>
-          </div>
-          <div class="contact-links">
-            <a
-              href="mailto:adnanhamidoun@gmail.com"
-              class="contact-link"
-              aria-label="Email"
-            >
-              <img
-                src="./icons/gmail.png"
-                alt="Email"
-                class="social-icon"
-                width="30"
-              />
-              <span>Email</span>
-            </a>
-            <a
-              href="https://github.com/adnanhamidoun/-Portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-link"
-              aria-label="GitHub"
-            >
-              <img
-                src="./icons/github.png"
-                alt="GitHub"
-                class="social-icon"
-                width="30"
-              />
-              <span>GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/adnan-hamidoun-el-habti-252079311/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-link"
-              aria-label="LinkedIn"
-            >
-              <img
-                src="./icons/linkedin.png"
-                alt="LinkedIn"
-                class="social-icon"
-                width="30"
-              />
-              <span>LinkedIn</span>
-            </a>
-          </div>
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="contactKicker">
+            Disponible para colaboraciones serias
+          </p>
+          <h2 id="contact-heading" data-i18n="contactTitle">Contacto</h2>
+        </div>
+
+        <p class="contact-copy" data-i18n="contactText">
+          Si tienes una propuesta, una idea o un reto tecnico, hablemos.
+        </p>
+
+        <div class="contact-links">
+          <a
+            href="mailto:adnanhamidoun@gmail.com"
+            class="contact-link"
+            aria-label="Email"
+          >
+            <img src="./icons/gmail.png" alt="Email" width="30" height="30" />
+            <span>Email</span>
+          </a>
+          <a
+            href="https://github.com/adnanhamidoun/-Portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+            aria-label="GitHub"
+          >
+            <img src="./icons/github.png" alt="GitHub" width="30" height="30" />
+            <span>GitHub</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/adnan-hamidoun-el-habti-252079311/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+            aria-label="LinkedIn"
+          >
+            <img
+              src="./icons/linkedin.png"
+              alt="LinkedIn"
+              width="30"
+              height="30"
+            />
+            <span>LinkedIn</span>
+          </a>
         </div>
       </section>
     </main>
 
-    <button id="back-to-top" type="button" aria-label="Volver arriba">↑</button>
+    <button id="back-to-top" type="button" aria-label="Volver arriba">
+      Arriba
+    </button>
 
     <script>
-      // Reveal de secciones con IntersectionObserver (más fluido y eficiente)
       const revealElements = document.querySelectorAll(".reveal");
       const revealObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) entry.target.classList.add("active");
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
           });
         },
         { threshold: 0.18 },
       );
       revealElements.forEach((el) => revealObserver.observe(el));
 
-      // Toggle del menú hamburguesa
       const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector("nav ul");
+      const navMenu = document.querySelector(".nav-links");
       hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        hamburger.classList.toggle("open");
-        hamburger.setAttribute(
-          "aria-expanded",
-          navMenu.classList.contains("active") ? "true" : "false",
-        );
+        const isOpen = navMenu.classList.toggle("active");
+        hamburger.classList.toggle("open", isOpen);
+        hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
 
-      // Cerrar menú al navegar desde móvil
-      document.querySelectorAll("nav ul a").forEach((link) => {
+      document.querySelectorAll(".nav-links a").forEach((link) => {
         link.addEventListener("click", () => {
           navMenu.classList.remove("active");
           hamburger.classList.remove("open");
@@ -554,13 +450,14 @@
         });
       });
 
-      // Estado activo del menú según sección visible
-      const menuLinks = document.querySelectorAll('nav ul a[href^="#"]');
+      const menuLinks = document.querySelectorAll('.nav-links a[href^="#"]');
       const sections = document.querySelectorAll("main section[id]");
       const sectionObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
+            if (!entry.isIntersecting) {
+              return;
+            }
             const id = entry.target.getAttribute("id");
             menuLinks.forEach((link) => {
               link.classList.toggle(
@@ -574,269 +471,126 @@
       );
       sections.forEach((section) => sectionObserver.observe(section));
 
-      // Botón "Volver arriba": Mostrar u ocultar según scroll
       const backToTop = document.getElementById("back-to-top");
-      if (backToTop) {
-        window.addEventListener("scroll", () => {
-          backToTop.classList.toggle("visible", window.scrollY > 300);
-        });
+      window.addEventListener("scroll", () => {
+        backToTop.classList.toggle("visible", window.scrollY > 380);
+      });
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
 
-        backToTop.addEventListener("click", () => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-      }
-
-      // Funcionalidad de cambio de idioma
-      // Funcionalidad de cambio de idioma
       let currentLang = "es";
       const translations = {
         es: {
           skipToMain: "Saltar al contenido principal",
-          navAbout: "Sobre mí",
+          navAbout: "Sobre mi",
           navProjects: "Proyectos",
-          navServices: "Servicios",
-          navTestimonials: "Testimonios",
           navContact: "Contacto",
-          heroSubtitle:
-            "Desarrollador Java & Spring | Eficiencia, estructura y visión técnica",
-          heroEyebrow: "Portfolio Engineer",
+          heroEyebrow: "Backend Data and AI Engineer",
+          heroStatus: "Soluciones robustas, datos utiles e IA aplicada.",
           heroCtaProjects: "Ver Proyectos",
           heroCtaContact: "Contactar",
-          heroMetric1: "6 Certificaciones Azure",
-          heroMetric2: "4 Proyectos End-to-End",
-          heroMetric3: "Backend + Data + IA",
-          aboutTitle: "Sobre mí",
-          aboutLead:
-            "Perfil orientado a producto, arquitectura robusta y colaboración real de equipo.",
+          aboutKicker: "Perfil profesional",
+          aboutTitle: "Sobre mi",
+          aboutIntro:
+            "Desarrollo backend, datos e inteligencia artificial con foco en impacto real.",
           aboutText1:
-            '"Nadie es mejor que nadie; simplemente somos piezas distintas de un mismo engranaje." Creo firmemente que el éxito de un proyecto no depende de un "genio" solitario, sino de la capacidad de un equipo para combinar sus fortalezas. Mi enfoque no es ser el que más sabe, sino ser el que mejor suma.',
+            '"Nadie es mejor que nadie; simplemente somos piezas distintas de un mismo engranaje." Creo firmemente que el exito de un proyecto no depende de un "genio" solitario, sino de la capacidad de un equipo para combinar sus fortalezas.',
           aboutText2:
-            "Vengo del mundo del desarrollo multiplataforma (DAM), lo que me dio una base sólida en la construcción de software real. Mi curiosidad por entender el valor de la información me llevó a especializarme con un Máster en Big Data e IA. Aunque cuento con 6 certificaciones oficiales en el ecosistema de Azure, las veo como herramientas de aprendizaje continuo, no como metas finales.",
+            "Vengo del mundo del desarrollo multiplataforma (DAM), lo que me dio una base solida para construir software real. Mi curiosidad por entender el valor de la informacion me llevo a especializarme con un Master en Big Data e IA.",
           aboutText3:
-            "Me considero una persona comunicativa que disfruta escuchando y aprendiendo de los demás. Mi objetivo es aportar mi granito de arena en el Backend y el mundo de los Datos, siempre con la humildad de saber que cada interacción con un compañero es una oportunidad para mejorar.",
-          aboutCVButton: "Descargar CV",
-          aboutSkills: "🛠️ Ecosistema Tecnológico",
-          ecosystemIntro:
-            "Enfoque en el ciclo de vida del dato, la arquitectura cloud y la construcción de soluciones de software robustas e inteligentes.",
-          ecoChip1: "Plataforma de Datos",
-          ecoChip2: "IA Aplicada",
-          ecoChip3: "Backend Escalable",
-          ecoChip4: "Cloud + DevOps",
-          ecoDataTitle: "📊 Ingeniería de Datos y Analítica",
-          ecoDataSubtitle:
-            "Ingesta, transformación y arquitectura analítica en cloud.",
-          ecoAiTitle: "🤖 IA y Machine Learning",
-          ecoAiSubtitle:
-            "Modelos predictivos e IA generativa orientada a negocio.",
-          ecoBackendTitle: "⚙️ Backend y Arquitectura",
-          ecoBackendSubtitle:
-            "Servicios robustos y patrones de diseño para escalar productos.",
-          ecoCloudTitle: "☁️ Cloud, DevOps y Calidad",
-          ecoCloudSubtitle:
-            "Entrega continua, despliegue fiable y control de calidad técnica.",
-          ecoStackLabel: "Stack principal",
-          ecoCapabilitiesLabel: "Capacidades clave",
-          ecoDataPoint1:
-            "Fabric: implementación de arquitecturas Medallion y gestión de OneLake (DP-600/700).",
-          ecoDataPoint2:
-            "Procesamiento: transformación a gran escala con Apache Spark, Databricks y Scala.",
-          ecoDataPoint3:
-            "Bases de datos: diseño y optimización en SQL Server y Azure SQL Database (DP-300).",
-          ecoAiPoint1:
-            "Modelado predictivo: forecasting y regresión con Python, Scikit-Learn, Pandas y NumPy.",
-          ecoAiPoint2:
-            "IA generativa: implementación de sistemas RAG y chat con documentos.",
-          ecoAiPoint3:
-            "Servicios cloud: integración con Azure AI (AI-102) y Azure ML (DP-100).",
-          ecoBackendPoint1:
-            "Core: desarrollo avanzado en Java (Spring Boot), Kotlin y Scala.",
-          ecoBackendPoint2:
-            "Arquitectura: diseño de microservicios, APIs RESTful y patrones escalables.",
-          ecoBackendPoint3:
-            "Calidad: pruebas unitarias y de integración con JUnit y Mockito.",
-          ecoCloudPoint1:
-            "Cloud: gestión y despliegue de recursos en Microsoft Azure y AWS.",
-          ecoCloudPoint2:
-            "Contenedores: virtualización y despliegue de entornos con Docker.",
-          ecoCloudPoint3:
-            "Validación: versionado con Git, validación de esquemas y métricas de modelos.",
-          certTitle: "📜 Certificaciones Oficiales",
-          certGroupData: "Datos y Analítica",
-          certGroupAi: "IA y Ciencia de Datos",
-          certGroupInfra: "Infraestructura y Datos",
+            "Me considero una persona comunicativa, orientada al Backend y al mundo de los Datos, con la humildad de seguir aprendiendo en cada colaboracion.",
+          aboutCVButton: "Visualizar CV",
+          techPanelTitle: "He trabajado con",
+          certPanelTitle: "Certificaciones oficiales",
           certDP600Name: "Fabric Analytics Engineer Associate",
           certDP700Name: "Fabric Data Engineer Associate",
           certAI102Name: "Azure AI Engineer Associate",
           certDP100Name: "Azure Data Scientist Associate",
           certDP300Name: "Azure Database Administrator Associate",
           certDP900Name: "Azure Data Fundamentals",
+          projectsKicker: "Trabajo reciente",
           projectsTitle: "Mis Proyectos",
           projectsIntro:
-            "Soluciones reales enfocadas en arquitectura limpia, rendimiento y experiencia de usuario.",
-          project1Desc:
-            "Chat en tiempo real con Java y sockets, simulando un sistema moderno de mensajería.",
-          project1Title: "ChannelCast: Java Real-Time Chat App",
-          project2Desc:
-            "Gestión de incidencias para empresas con registro, asignación y seguimiento de tickets.",
-          project2Title: "FixOnDemand: App de Ticketing de Incidencias",
-          project3Desc:
-            " Aplicación bancaria completa con login seguro, gestión de cuentas en varias monedas, envío de dinero, conversión de divisas en tiempo real y chatbot con IA.",
-          project3Title: "M&A Bank: Aplicación Bancaria Multidivisa",
-          project4Title: "Cuisine AML: Predicción Inteligente de Demanda",
-          project4Desc:
-            "Solución de analítica predictiva para hostelería que anticipa la afluencia por servicio y la demanda de platos, optimizando compras, preparación y asignación de recursos en cocina y sala.",
+            "Proyectos construidos de extremo a extremo, con criterio tecnico y orientacion a producto.",
           projectTagRealtime: "Tiempo Real",
-          projectTagService: "Operación IT",
+          project1Title: "ChannelCast: Java Real-Time Chat App",
+          project1Desc:
+            "Chat en tiempo real con Java y sockets, simulando un sistema moderno de mensajeria.",
+          projectTagService: "Operacion IT",
+          project2Title: "FixOnDemand: App de Ticketing de Incidencias",
+          project2Desc:
+            "Gestion de incidencias para empresas con registro, asignacion y seguimiento de tickets.",
           projectTagFintech: "FinTech",
-          projectTagAnalytics: "Analítica Predictiva",
-          servicesTitle: "Servicios",
-          service1Title: "Desarrollo Web",
-          service1Desc:
-            "Diseño y desarrollo de sitios web responsivos y escalables.",
-          service2Title: "Aplicaciones Móviles",
-          service2Desc:
-            "Creación de apps móviles nativas e híbridas para llegar a más usuarios.",
-          service3Title: "Consultoría Tecnológica",
-          service3Desc:
-            "Asesoría en la implementación de tecnologías y optimización de procesos.",
-          testimonialsTitle: "Testimonios",
-          testimonial1Text:
-            "Adnan transformó nuestra visión en una realidad tecnológica. Su capacidad para resolver problemas es inigualable.",
-          testimonial1Role: "CEO de Innovatech",
-          testimonial2Text:
-            "Su creatividad y compromiso han sido clave para el éxito de nuestros proyectos digitales.",
-          testimonial2Role: "Directora de Desarrollo",
-          contactTitle: "Contacto",
+          project3Title: "M and A Bank: Aplicacion Bancaria Multidivisa",
+          project3Desc:
+            "Aplicacion bancaria completa con login seguro, gestion de cuentas en varias monedas y chatbot con IA.",
+          projectTagAnalytics: "Analitica Predictiva",
+          project4Title: "Cuisine AML: Prediccion Inteligente de Demanda",
+          project4Desc:
+            "Solucion predictiva para hosteleria que anticipa afluencia y demanda para optimizar recursos.",
           contactKicker: "Disponible para colaboraciones serias",
-          contactText: "¿Tienes alguna consulta o propuesta? ¡Hablemos!",
-          contactBtn: "Contáctame",
-          footerText: "Creatividad en libertad: nada de derechos reservados.",
+          contactTitle: "Contacto",
+          contactText:
+            "Si tienes una propuesta, una idea o un reto tecnico, hablemos.",
         },
         en: {
           skipToMain: "Skip to main content",
-          navAbout: "About Me",
+          navAbout: "About",
           navProjects: "Projects",
-          navServices: "Services",
-          navTestimonials: "Testimonials",
           navContact: "Contact",
-          heroSubtitle:
-            "Java & Spring Developer | Efficiency, structure, and technical vision",
-          heroEyebrow: "Portfolio Engineer",
+          heroEyebrow: "Backend Data and AI Engineer",
+          heroStatus: "Robust solutions, useful data, and applied AI.",
           heroCtaProjects: "View Projects",
           heroCtaContact: "Contact",
-          heroMetric1: "6 Azure Certifications",
-          heroMetric2: "4 End-to-End Projects",
-          heroMetric3: "Backend + Data + AI",
-          aboutTitle: "About Me",
-          aboutLead:
-            "Product-minded profile focused on robust architecture and real team collaboration.",
+          aboutKicker: "Professional profile",
+          aboutTitle: "About me",
+          aboutIntro:
+            "Backend, data, and AI engineering focused on real product impact.",
           aboutText1:
-            '"No one is better than anyone else; we are simply different pieces of the same gear." I firmly believe that a project\'s success does not depend on a lone "genius", but on a team\'s ability to combine strengths. My approach is not to be the one who knows the most, but the one who contributes best.',
+            '"No one is better than anyone else; we are simply different pieces of the same gear." I strongly believe project success does not depend on a lone "genius", but on the ability of a team to combine strengths.',
           aboutText2:
-            "I come from a multi-platform development background (DAM), which gave me a solid foundation in building real-world software. My curiosity to understand the value of information led me to specialize with a Master's degree in Big Data and AI. Although I hold 6 official certifications in the Azure ecosystem, I see them as tools for continuous learning, not as final goals.",
+            "I come from a multi-platform development background (DAM), which gave me a solid base to build real software. My curiosity about the value of information led me to specialize with a Master in Big Data and AI.",
           aboutText3:
-            "I consider myself a communicative person who enjoys listening to and learning from others. My goal is to contribute my part in Backend and the world of Data, always with the humility to understand that every interaction with a teammate is an opportunity to improve.",
-          aboutCVButton: "Download CV",
-          aboutSkills: "🛠️ Technology Ecosystem",
-          ecosystemIntro:
-            "Focused on the full data lifecycle, cloud architecture, and building robust, intelligent software solutions.",
-          ecoChip1: "Data Platform",
-          ecoChip2: "Applied AI",
-          ecoChip3: "Scalable Backend",
-          ecoChip4: "Cloud + DevOps",
-          ecoDataTitle: "📊 Data Engineering & Analytics",
-          ecoDataSubtitle:
-            "Ingestion, transformation, and cloud analytics architecture.",
-          ecoAiTitle: "🤖 AI & Machine Learning",
-          ecoAiSubtitle:
-            "Predictive models and generative AI focused on business outcomes.",
-          ecoBackendTitle: "⚙️ Backend & Architecture",
-          ecoBackendSubtitle:
-            "Robust services and design patterns to scale products.",
-          ecoCloudTitle: "☁️ Cloud, DevOps & Quality",
-          ecoCloudSubtitle:
-            "Continuous delivery, reliable deployments, and technical quality control.",
-          ecoStackLabel: "Core stack",
-          ecoCapabilitiesLabel: "Key capabilities",
-          ecoDataPoint1:
-            "Fabric: implementation of Medallion architectures and OneLake management (DP-600/700).",
-          ecoDataPoint2:
-            "Processing: large-scale transformation with Apache Spark, Databricks, and Scala.",
-          ecoDataPoint3:
-            "Databases: design and optimization in SQL Server and Azure SQL Database (DP-300).",
-          ecoAiPoint1:
-            "Predictive modeling: forecasting and regression with Python, Scikit-Learn, Pandas, and NumPy.",
-          ecoAiPoint2:
-            "Generative AI: implementation of RAG systems and chat with documents.",
-          ecoAiPoint3:
-            "Cloud services: integration with Azure AI (AI-102) and Azure ML (DP-100).",
-          ecoBackendPoint1:
-            "Core: advanced development in Java (Spring Boot), Kotlin, and Scala.",
-          ecoBackendPoint2:
-            "Architecture: design of microservices, RESTful APIs, and scalable patterns.",
-          ecoBackendPoint3:
-            "Quality: unit and integration testing with JUnit and Mockito.",
-          ecoCloudPoint1:
-            "Cloud: management and deployment of resources in Microsoft Azure and AWS.",
-          ecoCloudPoint2:
-            "Containers: virtualization and environment deployment with Docker.",
-          ecoCloudPoint3:
-            "Validation: Git versioning, schema validation, and model metrics.",
-          certTitle: "📜 Official Certifications",
-          certGroupData: "Data & Analytics",
-          certGroupAi: "AI & Data Science",
-          certGroupInfra: "Infrastructure & Data",
+            "I consider myself a communicative person, focused on Backend and Data, with the humility to keep learning through every collaboration.",
+          aboutCVButton: "View CV",
+          techPanelTitle: "I have worked with",
+          certPanelTitle: "Official certifications",
           certDP600Name: "Fabric Analytics Engineer Associate",
           certDP700Name: "Fabric Data Engineer Associate",
           certAI102Name: "Azure AI Engineer Associate",
           certDP100Name: "Azure Data Scientist Associate",
           certDP300Name: "Azure Database Administrator Associate",
           certDP900Name: "Azure Data Fundamentals",
+          projectsKicker: "Recent work",
           projectsTitle: "My Projects",
           projectsIntro:
-            "Real-world solutions focused on clean architecture, performance, and user experience.",
+            "End-to-end projects built with technical criteria and product-oriented thinking.",
+          projectTagRealtime: "Real Time",
+          project1Title: "ChannelCast: Java Real-Time Chat App",
           project1Desc:
             "Real-time chat with Java and sockets, simulating a modern messaging system.",
-          project1Title: "ChannelCast: Java Real-Time Chat App",
-          project2Desc:
-            "Incident management for companies including registration, assignment, and ticket tracking.",
+          projectTagService: "IT Operations",
           project2Title: "FixOnDemand: Incident Ticketing App",
+          project2Desc:
+            "Incident management for companies with registration, assignment and ticket tracking.",
+          projectTagFintech: "FinTech",
+          project3Title: "M and A Bank: Multi-Currency Banking App",
           project3Desc:
-            "Full-featured banking app with secure login, multi-currency account management, money transfers, real-time currency conversion, and an AI-powered chatbot.",
-          project3Title: "M&A Bank: Multi-Currency Banking App",
+            "Full banking app with secure login, multi-currency accounts and an AI chatbot.",
+          projectTagAnalytics: "Predictive Analytics",
           project4Title: "Cuisine AML: Smart Demand Forecasting",
           project4Desc:
-            "A predictive analytics solution for hospitality that forecasts service traffic and dish demand, optimizing purchasing, prep planning, and resource allocation across kitchen and floor operations.",
-          projectTagRealtime: "Real Time",
-          projectTagService: "IT Operations",
-          projectTagFintech: "FinTech",
-          projectTagAnalytics: "Predictive Analytics",
-          servicesTitle: "Services",
-          service1Title: "Web Development",
-          service1Desc:
-            "Design and development of responsive and scalable websites.",
-          service2Title: "Mobile Applications",
-          service2Desc:
-            "Creation of native and hybrid mobile apps to reach more users.",
-          service3Title: "Technology Consulting",
-          service3Desc:
-            "Consulting in technology implementation and process optimization.",
-          testimonialsTitle: "Testimonials",
-          testimonial1Text:
-            "Adnan transformed our vision into technological reality. His problem-solving skills are unmatched.",
-          testimonial1Role: "CEO of Innovatech",
-          testimonial2Text:
-            "His creativity and commitment have been key to the success of our digital projects.",
-          testimonial2Role: "Development Director",
-          contactTitle: "Contact",
+            "Predictive solution for hospitality that anticipates traffic and demand to optimize resources.",
           contactKicker: "Available for serious collaborations",
-          contactText: "Do you have any questions or suggestions? Let's talk!",
-          contactBtn: "Contact Me",
-          footerText: "Creativity in freedom: no rights reserved.",
+          contactTitle: "Contact",
+          contactText:
+            "If you have a proposal, an idea, or a technical challenge, let us talk.",
         },
       };
 
       function updateLanguage() {
+        document.documentElement.lang = currentLang;
         document.querySelectorAll("[data-i18n]").forEach((el) => {
           const key = el.getAttribute("data-i18n");
           if (translations[currentLang] && translations[currentLang][key]) {
